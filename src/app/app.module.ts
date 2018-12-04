@@ -3,16 +3,33 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { FaceComponent } from './face/face.component';
+import { DataService } from './data.service';
+import { HttpModule } from '@angular/http';
+import { Http,Headers, RequestOptions } from '@angular/http';
+
+
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FaceRecognitionService } from './face-recognition.service';
+import { CamComponent } from './cam/cam.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    FaceComponent,
+    CamComponent
   ],
   imports: [
+    FormsModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpModule,
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [
+    DataService,
+    FaceRecognitionService
+  ],
+  bootstrap: [AppComponent],
+
 })
 export class AppModule { }
