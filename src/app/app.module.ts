@@ -12,12 +12,14 @@ import { Http,Headers, RequestOptions } from '@angular/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FaceRecognitionService } from './face-recognition.service';
 import { CamComponent } from './cam/cam.component';
+import { MheaderComponent } from './mheader/mheader.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FaceComponent,
-    CamComponent
+    CamComponent,
+    MheaderComponent
   ],
   imports: [
     FormsModule,

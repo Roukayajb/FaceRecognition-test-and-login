@@ -130,6 +130,7 @@ export class FaceComponent implements OnInit {
    this.data.getPersonAge(imageUrl).subscribe(
      data=>{this.personAge = data.json(); 
       this.personNumber= this.personAge.length;
+      console.log(this.personAge);
       for (let i = 0; i < this.personAge.length; i++) {
          pAnger = 0;
          pFear = 0;
